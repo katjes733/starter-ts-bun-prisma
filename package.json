@@ -3,6 +3,8 @@
   "module": "main.ts",
   "type": "module",
   "scripts": {
+    "docker:up": "docker-compose --env-file .env up -d",
+    "docker:down": "docker-compose --env-file .env down",
     "eslint": "bun x eslint src/*",
     "eslint:fix": "bun eslint -- --quiet --fix",
     "prettier": "bun x prettier --check src/*",
@@ -33,6 +35,7 @@
     "bun-types": "^1.0.23",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4",
+    "prisma": "^5.8.1",
     "stylelint": "^16.1.0",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended": "^14.0.0"
@@ -40,5 +43,7 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@prisma/client": "^5.8.1"
+  }
 }
