@@ -9,6 +9,8 @@
     "eslint:fix": "bun eslint -- --quiet --fix",
     "prettier": "bun x prettier --check src/*",
     "prettier:fix": "bun x prettier --write src/*",
+    "prisma:introspect": "bunx prisma db pull && bunx prisma generate",
+    "prisma:migrate": "bunx prisma migrate dev",
     "start": "bun run src/main.ts",
     "stylelint": "stylelint 'src/**/*.tsx' --aei",
     "stylelint:fix": "stylelint 'src/**/*.tsx' --aei --fix",
